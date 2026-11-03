@@ -1,46 +1,24 @@
-/* Regla universal obligatoria para neutralizar las matemáticas del navegador */
+/* Reseteo general y obligatoriedad del modelo de caja */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Áreas principales (Supercajas) con colores de fondo y espaciado */
+/* Colores de fondo para identificar las "supercajas" principales */
 header {
     background-color: #e3f2fd;
     padding: 20px;
     text-align: center;
 }
 
-.logo-container {
-    margin-bottom: 15px;
-}
-
-.logo-img {
-    display: inline-block;
-    width: 120px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #512da8;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
 main {
-    background-color: #fafafa;
+    background-color: #f5f5f5;
     padding: 20px;
-    text-align: center; /* Permite alinear los article inline-block clásicos */
 }
 
 aside {
-    background-color: #f5f5f5;
+    background-color: #fff3e0;
     padding: 15px;
 }
 
@@ -48,25 +26,16 @@ footer {
     background-color: #212121;
     color: #ffffff;
     padding: 20px;
+    text-align: center;
 }
 
-footer ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-footer li {
+/* Estilos de las tarjetas de productos con Padding y Margin obligatorios */
+article {
     display: inline-block;
-}
-
-/* Tarjetas de productos (<article>) - Modelo de caja tradicional sin flex ni grid */
-.caja-producto {
-    display: inline-block;
-    width: 280px;
+    width: 30%;
     background-color: #ffffff;
-    padding: 20px;          /* Aire de protección interno */
-    margin: 15px;           /* Campo de fuerza exterior (margen) */
-    border: 1px solid #ddd;
+    border: 1px solid #cccccc;
+    padding: 20px; /* Aire interno para que el texto no toque los bordes */
+    margin: 15px 1.5%; /* Espacio exterior para evitar colisiones */
     vertical-align: top;
-    text-align: left;
 }
