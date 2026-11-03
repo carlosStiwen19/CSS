@@ -1,13 +1,42 @@
-/* Colores de fondo para identificar las áreas principales (supercajas) */
+/* Regla universal obligatoria para neutralizar las matemáticas del navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Áreas principales (Supercajas) con colores de fondo y espaciado */
 header {
     background-color: #e3f2fd;
     padding: 20px;
-    /* Más adelante ajustaremos la imagen de fondo aquí */
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.logo-img {
+    display: inline-block;
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #512da8;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 main {
     background-color: #fafafa;
     padding: 20px;
+    text-align: center; /* Permite alinear los article inline-block clásicos */
 }
 
 aside {
@@ -21,21 +50,23 @@ footer {
     padding: 20px;
 }
 
-/* Inyectar aire de protección y margen exterior en las tarjetas de productos (<article>) */
-article {
-    display: inline-block; /* Manteniendo el modelo clásico exigido sin flex/grid */
-    width: 280px;
-    background-color: #ffffff;
-    padding: 20px;          /* Relleno interno para que el texto no toque los bordes */
-    margin: 15px;           /* Margen exterior para que no colisionen entre sí */
-    border: 1px solid #ddd;
-    vertical-align: top;
+footer ul {
+    list-style: none;
+    margin-top: 10px;
 }
 
-/* Decoración avanzada del encabezado con imagen de fondo (opcional o de prueba) */
-header {
-    /* background-image: url('tu-imagen.jpg'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+footer li {
+    display: inline-block;
+}
+
+/* Tarjetas de productos (<article>) - Modelo de caja tradicional sin flex ni grid */
+.caja-producto {
+    display: inline-block;
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;          /* Aire de protección interno */
+    margin: 15px;           /* Campo de fuerza exterior (margen) */
+    border: 1px solid #ddd;
+    vertical-align: top;
+    text-align: left;
 }

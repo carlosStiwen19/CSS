@@ -2,57 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo - Taller CSS</title>
+    <title>Catálogo - Modelo de Caja</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
     <header>
+        <div class="logo-container">
+            <img src="img/logo_heladeria.png" alt="Logo Heladería" class="logo-img">
+        </div>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <h2>Nuestros Productos</h2>
+        <article class="caja-producto">
+            <h3>Producto 2</h3>
+            <p>Descripción del producto dos.</p>
+            <p class="precio">$75.000</p>
+            <a href="#">Comprar</a>
+        </article>
 
-    <!-- Cajas de prueba para el modelo de caja -->
-    <div class="contenedor-cajas">
-        <div class="caja-roja"></div>
-        <div class="caja-roja"></div>
-        <div class="caja-roja"></div>
-    </div>
-</main> 
+        <article class="caja-producto">
+            <h3>Producto 3</h3>
+            <p>Descripción del producto tres.</p>
+            <p class="precio">$100.000</p>
+            <a href="#">Comprar</a>
+        </article>
 
-            <article>
-                <h3>Producto 2</h3>
-                <p>Descripción del producto dos.</p>
-                <p>$75.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
-            </article>
-
-            <article>
-                <h3>Producto 3</h3>
-                <p>Descripción del producto tres.</p>
-                <p>$100.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
-            </article>
-
-            <article>
-                <h3>Producto 4</h3>
-                <p>Descripción del producto cuatro.</p>
-                <p>$120.000</p>
-                <a href="#" class="btn-comprar">Comprar</a>
-            </article>
-        </section>
+        <article class="caja-producto">
+            <h3>Producto 4</h3>
+            <p>Descripción del producto cuatro.</p>
+            <p class="precio">$120.000</p>
+            <a href="#">Comprar</a>
+        </article>
     </main>
 
     <aside>
-        <h2>Filtros</h2>
+        <h3>Filtros</h3>
         <ul>
             <li><a href="#">Filtro 1</a></li>
             <li><a href="#">Filtro 2</a></li>
@@ -65,6 +57,5 @@
             <li><a href="#">Redes Sociales</a></li>
         </ul>
     </footer>
-
 </body>
 </html>
