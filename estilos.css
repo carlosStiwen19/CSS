@@ -1,29 +1,41 @@
-/* Regla universal obligatoria para el Box Model */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* Colores de fondo para identificar las áreas principales (supercajas) */
+header {
+    background-color: #e3f2fd;
+    padding: 20px;
+    /* Más adelante ajustaremos la imagen de fondo aquí */
 }
 
-/* Contenedor tradicional (alineación clásica con text-align si se requiere) */
-.contenedor-cajas {
-    text-align: center; /* Centra los elementos inline-block de forma clásica */
+main {
+    background-color: #fafafa;
     padding: 20px;
 }
 
-/* Cajas rojas usando estrictamente propiedades tradicionales */
-.caja-roja {
-    display: inline-block; /* Las pone una al lado de la otra respetando ancho y alto */
-    width: 150px;
-    height: 150px;
-    background-color: #d32f2f;
-    
-    /* Espaciado interno */
+aside {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+footer {
+    background-color: #212121;
+    color: #ffffff;
     padding: 20px;
-    
-    /* Grosor y color del borde */
-    border: 5px solid #000000;
-    
-    /* Margen externo clásico */
-    margin: 15px;
+}
+
+/* Inyectar aire de protección y margen exterior en las tarjetas de productos (<article>) */
+article {
+    display: inline-block; /* Manteniendo el modelo clásico exigido sin flex/grid */
+    width: 280px;
+    background-color: #ffffff;
+    padding: 20px;          /* Relleno interno para que el texto no toque los bordes */
+    margin: 15px;           /* Margen exterior para que no colisionen entre sí */
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+/* Decoración avanzada del encabezado con imagen de fondo (opcional o de prueba) */
+header {
+    /* background-image: url('tu-imagen.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

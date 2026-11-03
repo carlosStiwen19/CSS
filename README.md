@@ -28,3 +28,13 @@ Para resolver colisiones visuales de manera predecible y sin recurrir jamás a l
 ## 📦 Control de Versiones y Despliegue
 - **Rama de Trabajo:** `develop`
 - **Metodología de Commits:** Convventional Commits (`feat(styles): maquetar catalogo semantico y aplicar jerarquia CSS`)
+## Hallazgos: El Modelo de Caja
+
+1. **Diferencia práctica entre Margin y Padding:**
+   El `padding` es el espacio de relleno interno que se encuentra entre el contenido de la caja y su borde (expande el área interior). Por su parte, el `margin` es el espacio de separación exterior que aleja a la caja de los demás elementos circundantes, evitando que colisionen visualmente.
+
+2. **Por qué es obligatorio usar `box-sizing: border-box`:**
+   Es indispensable porque cambia la forma en que el navegador calcula el ancho y alto total de los elementos. Al activarlo, los rellenos (`padding`) y los bordes (`border`) se suman hacia adentro del tamaño declarado, evitando que la caja ensanche de más y rompa la estructura del contenedor padre.
+
+3. **Efecto en los elementos hermanos al aplicar un margen grande:**
+   Cuando a un elemento se le asigna un margen exterior muy grande, empuja de manera directa a los elementos hermanos adyacentes, generando mayor distancia visual o forzándolos a bajar de línea (en comportamientos de bloque o `inline-block`) debido al espacio físico que ahora ocupa ese margen.
