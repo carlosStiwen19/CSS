@@ -1,3 +1,27 @@
-.color-aqua {
-    color: aqua;
+/* 1. Herencia base en el body */
+body {
+    font-family: sans-serif;
+    color: #333333;
+}
+
+/* 2. Selectores combinados por zonas exactas */
+header nav ul li a {
+    color: blue;
+}
+
+aside ul li a {
+    color: green;
+}
+
+footer ul li a {
+    color: gray;
+}
+
+/* 3. Conflicto de autoridad: Clase (10 pts) vs ID (100 pts) */
+.btn-comprar {
+    color: orange;
+}
+
+#btn-destacado {
+    color: red;
 }
