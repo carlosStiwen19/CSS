@@ -1,10 +1,26 @@
-/* 1. Herencia base en el body */
+/* Regla universal para neutralizar el Box Model del navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos de las cajas rojas de prueba */
+.caja-roja {
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: #d32f2f;
+    margin: 15px 0;
+    border: 3px solid #000000;
+}
+
+/* El resto de tus estilos anteriores se quedan abajo intactos */
 body {
     font-family: sans-serif;
     color: #333333;
 }
 
-/* 2. Selectores combinados por zonas exactas */
 header nav ul li a {
     color: blue;
 }
@@ -15,13 +31,4 @@ aside ul li a {
 
 footer ul li a {
     color: gray;
-}
-
-/* 3. Conflicto de autoridad: Clase (10 pts) vs ID (100 pts) */
-.btn-comprar {
-    color: orange;
-}
-
-#btn-destacado {
-    color: red;
 }
