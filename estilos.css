@@ -1,34 +1,29 @@
-/* Regla universal para neutralizar el Box Model del navegador */
+/* Regla universal obligatoria para el Box Model */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos de las cajas rojas de prueba */
+/* Contenedor tradicional (alineación clásica con text-align si se requiere) */
+.contenedor-cajas {
+    text-align: center; /* Centra los elementos inline-block de forma clásica */
+    padding: 20px;
+}
+
+/* Cajas rojas usando estrictamente propiedades tradicionales */
 .caja-roja {
-    display: block;
-    width: 120px;
-    height: 120px;
+    display: inline-block; /* Las pone una al lado de la otra respetando ancho y alto */
+    width: 150px;
+    height: 150px;
     background-color: #d32f2f;
-    margin: 15px 0;
-    border: 3px solid #000000;
-}
-
-/* El resto de tus estilos anteriores se quedan abajo intactos */
-body {
-    font-family: sans-serif;
-    color: #333333;
-}
-
-header nav ul li a {
-    color: blue;
-}
-
-aside ul li a {
-    color: green;
-}
-
-footer ul li a {
-    color: gray;
+    
+    /* Espaciado interno */
+    padding: 20px;
+    
+    /* Grosor y color del borde */
+    border: 5px solid #000000;
+    
+    /* Margen externo clásico */
+    margin: 15px;
 }
