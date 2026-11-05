@@ -1,12 +1,14 @@
 /* --- CENTRAL DE MANDO (Variables / Tokens de Diseño) --- */
 :root {
-  --color-primario: #1a73e8;
-  --fondo-header: #e3f2fd;
-  --fondo-main: #f0f2f5;
-  --fondo-card: #ffffff;
-  --fondo-footer: #1e1e1e;
+  --color-primario: #d81b60;
+  --color-boton: #1a73e8;
+  --texto-boton: #ffffff;
+  --fondo-header: #fce4ec;
+  --fondo-main: #fce8ec; /* Fondo general rosado claro */
+  --fondo-card: #f8bbd0; /* Cajitas en rosado opaco / pastel */
+  --fondo-footer: #212121;
   --texto-footer: #ffffff;
-  --color-borde: #dcdcdc;
+  --color-borde: #f48fb1;
   --espacio-base: 20px;
   --radio-borde: 8px;
 }
@@ -20,49 +22,119 @@
 
 body {
   background-color: var(--fondo-main);
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
 }
 
+/* --- HEADER Y NAVEGACIÓN --- */
 header {
   background-color: var(--fondo-header);
-  padding: var(--espacio-base);
+  padding: 15px var(--espacio-base);
+  border-bottom: 1px solid var(--color-borde);
 }
 
-/* Contenedor de cajas */
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+/* --- TÍTULOS --- */
+h1,
+h2 {
+  margin: 15px var(--espacio-base);
+  font-size: 24px;
+  color: #222;
+}
+
+/* --- CONTENEDOR DE PRODUCTOS --- */
+main,
 .contenedor-cajas {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: var(--espacio-base);
 }
 
-/* Tarjetas de productos usando variables CSS */
+/* Selector amplio para asegurar que cualquier tarjeta de producto tome el diseño */
+article,
+.producto,
 .caja-roja {
   display: inline-block;
-  width: 300px;
+  width: 30%;
+  min-width: 260px;
   background-color: var(--fondo-card);
   padding: var(--espacio-base);
   border: 1px solid var(--color-borde);
   border-radius: var(--radio-borde);
-  margin: 15px;
+  margin: 15px 1.5%;
   vertical-align: top;
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* Ocultar elementos vacíos */
+article:empty,
+.producto:empty,
+.caja-roja:empty {
+  display: none;
+}
+
+/* Textos dentro de las tarjetas */
+article h3,
+.producto h3,
 .caja-roja h3 {
+  font-size: 18px;
   margin-bottom: 10px;
-  color: #333;
+  color: #222;
 }
 
+article p,
+.producto p,
 .caja-roja p {
-  margin-bottom: 15px;
-  color: #666;
   font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
 }
 
-/* Footer */
+/* Botón de Comprar */
+button,
+.btn-comprar,
+a.button {
+  display: inline-block;
+  background-color: var(--color-boton);
+  color: var(--texto-boton);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* --- FILTROS Y FOOTER --- */
+.filtros,
+section.filtros {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 var(--espacio-base);
+}
+
 footer {
   background-color: var(--fondo-footer);
   color: var(--texto-footer);
   padding: var(--espacio-base);
   text-align: center;
+  margin-top: 40px;
 }
