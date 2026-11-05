@@ -1,15 +1,26 @@
+/* --- CENTRAL DE MANDO (Variables / Tokens de Diseño) --- */
 :root {
-  --color-primario: #512da8;
+  --color-primario: #1a73e8;
   --fondo-header: #e3f2fd;
-  --fondo-main: #f5f5f5;
-  --fondo-footer: #212121;
+  --fondo-main: #f0f2f5;
+  --fondo-card: #ffffff;
+  --fondo-footer: #1e1e1e;
   --texto-footer: #ffffff;
+  --color-borde: #dcdcdc;
   --espacio-base: 20px;
+  --radio-borde: 8px;
+}
+
+/* Regla universal obligatoria para el Box Model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--fondo-main);
-  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 header {
@@ -17,8 +28,41 @@ header {
   padding: var(--espacio-base);
 }
 
+/* Contenedor de cajas */
+.contenedor-cajas {
+  text-align: center;
+  padding: var(--espacio-base);
+}
+
+/* Tarjetas de productos usando variables CSS */
+.caja-roja {
+  display: inline-block;
+  width: 300px;
+  background-color: var(--fondo-card);
+  padding: var(--espacio-base);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  margin: 15px;
+  vertical-align: top;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.caja-roja h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.caja-roja p {
+  margin-bottom: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Footer */
 footer {
   background-color: var(--fondo-footer);
   color: var(--texto-footer);
   padding: var(--espacio-base);
+  text-align: center;
 }
