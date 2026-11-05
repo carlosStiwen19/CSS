@@ -1,15 +1,25 @@
-/* --- CENTRAL DE MANDO (Tokens de Diseño) --- */
+/* --- MOMENTO 2: SISTEMA DE VARIABLES MAESTRO (:root) --- */
 :root {
+  /* Variables de Color (Paleta corporativa arena / minimalista) */
   --color-primario: #2c2c2c;
-  --color-boton: #1d4ed8;
-  --texto-boton: #ffffff;
+  --color-secundario: #1d4ed8;
+  --color-fondo: #f3efe6;
+  --color-texto: #333333;
   --fondo-header: #e5e0d8;
-  --fondo-main: #f3efe6;
   --fondo-card: #e8e3dc;
   --fondo-footer: #1e1e1e;
   --texto-footer: #ffffff;
   --color-borde: #d4cec4;
-  --espacio-base: 20px;
+
+  /* Variables de Tipografía */
+  --fuente-principal: "Inter", Arial, sans-serif;
+
+  /* Variables de Espaciado (Box Model tokens) */
+  --espaciado-pequeno: 8px;
+  --espaciado-medio: 16px;
+  --espaciado-grande: 24px;
+
+  /* Variables de Estructura */
   --radio-borde: 6px;
 }
 
@@ -20,14 +30,15 @@
 }
 
 body {
-  background-color: var(--fondo-main);
-  font-family: Arial, Helvetica, sans-serif;
-  color: #333;
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-principal);
+  color: var(--color-texto);
 }
 
+/* --- HEADER Y NAVEGACIÓN --- */
 header {
   background-color: var(--fondo-header);
-  padding: 15px var(--espacio-base);
+  padding: var(--espaciado-medio) var(--espaciado-grande);
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -48,35 +59,34 @@ nav ul li a {
 
 h1,
 h2 {
-  margin: 20px var(--espacio-base);
+  margin: var(--espaciado-grande);
   font-size: 24px;
-  color: #222;
+  color: var(--color-primario);
 }
 
-/* Contenedor centrado */
+/* --- CONTENEDOR PRINCIPAL Y TARJETAS --- */
 main,
 .contenedor-cajas {
-  width: 90%;
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center; /* Centra las cajas para que bajen ordenadas */
+  padding: var(--espaciado-medio);
+  text-align: center;
 }
 
-/* 4 cajas distribuidas exactamente en dos columnas (45% de ancho cada una) */
 article,
 .producto,
 .caja-roja {
   display: inline-block;
-  width: 45%;
-  min-width: 280px;
+  width: 47%;
+  min-width: 300px;
   background-color: var(--fondo-card);
-  padding: 25px;
+  padding: var(--espaciado-grande);
   border: 1px solid var(--color-borde);
   border-radius: var(--radio-borde);
-  margin: 15px 2%; /* Margen simétrico para que formen la cuadrícula de 2x2 */
+  margin: var(--espaciado-pequeno) 1% var(--espaciado-medio) 1%;
   vertical-align: top;
-  text-align: left; /* Texto interno alineado a la izquierda */
+  text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
@@ -90,25 +100,25 @@ h3,
 .caja-roja h3,
 .producto h3 {
   font-size: 18px;
-  margin-bottom: 10px;
-  color: #111;
+  margin-bottom: var(--espaciado-pequeno);
+  color: var(--color-primario);
 }
 
 p,
 .caja-roja p,
 .producto p {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
+  color: #555555;
+  margin-bottom: var(--espaciado-medio);
 }
 
 button,
 .btn-comprar,
 a.button {
   display: inline-block;
-  background-color: var(--color-boton);
-  color: var(--texto-boton);
-  padding: 8px 18px;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  padding: var(--espaciado-pequeno) var(--espaciado-medio);
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -116,21 +126,46 @@ a.button {
   text-decoration: none;
 }
 
+/* --- SECCIÓN DE FILTROS --- */
 .filtros,
-section.filtros {
-  width: 90%;
+aside.filtros {
+  width: 95%;
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 var(--espacio-base);
+  margin: var(--espaciado-grande) auto;
+  background-color: var(--fondo-card);
+  padding: var(--espaciado-grande);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.filtros h3 {
+  margin-bottom: var(--espaciado-pequeno);
+  font-size: 18px;
+  color: var(--color-primario);
+}
+
+.filtros ul {
+  list-style: none;
+}
+
+.filtros ul li {
+  margin-bottom: var(--espaciado-pequeno);
+}
+
+.filtros ul li a {
+  text-decoration: none;
+  color: var(--color-secundario);
+  font-weight: bold;
 }
 
 /* --- FOOTER --- */
 footer {
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  width: 100%;
   background-color: var(--fondo-footer);
   color: var(--texto-footer);
-  padding: var(--espacio-base);
+  padding: var(--espaciado-grande);
   text-align: center;
-  margin-top: 60px; /* Espacio limpio antes del pie de página */
-  clear: both; /* Asegura que flote debajo de todo */
+  margin-top: var(--espaciado-grande);
+  clear: both;
 }
