@@ -1,82 +1,73 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Productos</title>
-    <!-- Vinculación de la tipografía corporativa desde Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <!-- El contenido de tu header, main, filtros y footer se mantiene igual -->
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Helados</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
+    <h2>Nuestros Productos</h2>
 
-    <!-- Cajas de prueba para el modelo de caja -->
-    <div class="contenedor-cajas">
-        <div class="caja-roja"></div>
-        <div class="caja-roja"></div>
-        <div class="caja-roja"></div>
-    </div>
-</main> 
-
-          
-    <article>
+    <main class="contenedor-cajas">
+      <!-- Producto 1 -->
+      <article class="producto">
+        <img src="helado1.jpg" alt="Helado 1" class="img-producto" />
         <h3>Producto 1</h3>
         <p>Descripción del producto uno.</p>
-        <p>$50.000</p>
-        <a href="#" class="btn-comprar">Comprar</a>
-    </article>
+        <p><strong>$50.000</strong></p>
+        <button class="btn-comprar">Comprar</button>
+      </article>
 
-    <article>
+      <!-- Producto 2 -->
+      <article class="producto">
+        <img src="helado2.jpg" alt="Helado 2" class="img-producto" />
         <h3>Producto 2</h3>
         <p>Descripción del producto dos.</p>
-        <p>$75.000</p>
-        <a href="#" class="btn-comprar">Comprar</a>
-    </article>
+        <p><strong>$75.000</strong></p>
+        <button class="btn-comprar">Comprar</button>
+      </article>
 
-    <article>
+      <!-- Producto 3 -->
+      <article class="producto">
+        <img src="helado3.jpg" alt="Helado 3" class="img-producto" />
         <h3>Producto 3</h3>
         <p>Descripción del producto tres.</p>
-        <p>$100.000</p>
-        <a href="#" class="btn-comprar">Comprar</a>
-    </article>
+        <p><strong>$100.000</strong></p>
+        <button class="btn-comprar">Comprar</button>
+      </article>
 
-    <article>
+      <!-- Producto 4 -->
+      <article class="producto">
+        <img src="helado4.jpg" alt="Helado 4" class="img-producto" />
         <h3>Producto 4</h3>
         <p>Descripción del producto cuatro.</p>
-        <p>$120.000</p>
-        <a href="#" class="btn-comprar">Comprar</a>
-    </article>
-</main>
+        <p><strong>$120.000</strong></p>
+        <button class="btn-comprar">Comprar</button>
+      </article>
+    </main>
 
-    <aside>
-        <h2>Filtros</h2>
-        <ul>
-            <li><a href="#">Filtro 1</a></li>
-            <li><a href="#">Filtro 2</a></li>
-        </ul>
+    <aside class="filtros">
+      <h3>Filtros</h3>
+      <ul>
+        <li><a href="#">Filtro 1</a></li>
+        <li><a href="#">Filtro 2</a></li>
+      </ul>
     </aside>
 
     <footer>
-        <p>&copy; 2026 - Todos los derechos reservados</p>
-        <ul>
-            <li><a href="#">Redes Sociales</a></li>
-        </ul>
+      <p>&copy; 2026 - Todos los derechos reservados</p>
+      <p><a href="#" style="color: #93c5fd">Redes Sociales</a></p>
     </footer>
-
-</body>
+  </body>
 </html>
