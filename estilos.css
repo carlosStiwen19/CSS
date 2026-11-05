@@ -1,19 +1,18 @@
-/* --- CENTRAL DE MANDO (Variables / Tokens de Diseño) --- */
+/* --- CENTRAL DE MANDO (Tokens de Diseño) --- */
 :root {
-  --color-primario: #d81b60;
-  --color-boton: #1a73e8;
+  --color-primario: #2c2c2c;
+  --color-boton: #1d4ed8;
   --texto-boton: #ffffff;
-  --fondo-header: #fce4ec;
-  --fondo-main: #fce8ec; /* Fondo general rosado claro */
-  --fondo-card: #f8bbd0; /* Cajitas en rosado opaco / pastel */
-  --fondo-footer: #212121;
+  --fondo-header: #e5e0d8;
+  --fondo-main: #f3efe6;
+  --fondo-card: #e8e3dc;
+  --fondo-footer: #1e1e1e;
   --texto-footer: #ffffff;
-  --color-borde: #f48fb1;
+  --color-borde: #d4cec4;
   --espacio-base: 20px;
-  --radio-borde: 8px;
+  --radio-borde: 6px;
 }
 
-/* Regla universal obligatoria para el Box Model */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,7 +25,6 @@ body {
   color: #333;
 }
 
-/* --- HEADER Y NAVEGACIÓN --- */
 header {
   background-color: var(--fondo-header);
   padding: 15px var(--espacio-base);
@@ -39,7 +37,7 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 25px;
 }
 
 nav ul li a {
@@ -48,73 +46,69 @@ nav ul li a {
   color: var(--color-primario);
 }
 
-/* --- TÍTULOS --- */
 h1,
 h2 {
-  margin: 15px var(--espacio-base);
+  margin: 20px var(--espacio-base);
   font-size: 24px;
   color: #222;
 }
 
-/* --- CONTENEDOR DE PRODUCTOS --- */
+/* Contenedor centrado */
 main,
 .contenedor-cajas {
-  width: 100%;
-  max-width: 1100px;
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center;
+  text-align: center; /* Centra las cajas para que bajen ordenadas */
 }
 
-/* Selector amplio para asegurar que cualquier tarjeta de producto tome el diseño */
+/* 4 cajas distribuidas exactamente en dos columnas (45% de ancho cada una) */
 article,
 .producto,
 .caja-roja {
   display: inline-block;
-  width: 30%;
-  min-width: 260px;
+  width: 45%;
+  min-width: 280px;
   background-color: var(--fondo-card);
-  padding: var(--espacio-base);
+  padding: 25px;
   border: 1px solid var(--color-borde);
   border-radius: var(--radio-borde);
-  margin: 15px 1.5%;
+  margin: 15px 2%; /* Margen simétrico para que formen la cuadrícula de 2x2 */
   vertical-align: top;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: left; /* Texto interno alineado a la izquierda */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
-/* Ocultar elementos vacíos */
 article:empty,
 .producto:empty,
 .caja-roja:empty {
   display: none;
 }
 
-/* Textos dentro de las tarjetas */
-article h3,
-.producto h3,
-.caja-roja h3 {
+h3,
+.caja-roja h3,
+.producto h3 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: #222;
+  color: #111;
 }
 
-article p,
-.producto p,
-.caja-roja p {
+p,
+.caja-roja p,
+.producto p {
   font-size: 14px;
   color: #555;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
-/* Botón de Comprar */
 button,
 .btn-comprar,
 a.button {
   display: inline-block;
   background-color: var(--color-boton);
   color: var(--texto-boton);
-  padding: 8px 16px;
+  padding: 8px 18px;
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -122,19 +116,21 @@ a.button {
   text-decoration: none;
 }
 
-/* --- FILTROS Y FOOTER --- */
 .filtros,
 section.filtros {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 20px auto;
   padding: 0 var(--espacio-base);
 }
 
+/* --- FOOTER --- */
 footer {
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
   background-color: var(--fondo-footer);
   color: var(--texto-footer);
   padding: var(--espacio-base);
   text-align: center;
-  margin-top: 40px;
+  margin-top: 60px; /* Espacio limpio antes del pie de página */
+  clear: both; /* Asegura que flote debajo de todo */
 }
