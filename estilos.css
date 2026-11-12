@@ -11,10 +11,10 @@
   --espaciado-grande: 30px;
   --radio-borde: 8px;
 } 
-
+@import url("css/catalogo.css");
 @import url("css/tarjeta.css");
 @import url("css/botones.css");
-@import url("css/menu-lateral.css"); 
+@import url("css/menu-lateral.css");
 
 * {
   box-sizing: border-box;
