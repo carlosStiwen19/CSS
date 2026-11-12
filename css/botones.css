@@ -1,0 +1,30 @@
+.btn {
+    font-family: var(--fuente-principal);
+    padding: 10px 16px;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn--primario {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+}
+
+.btn--primario:hover {
+    opacity: 0.9;
+}
+
+.btn--secundario {
+    background-color: transparent;
+    border: 2px solid var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.btn--secundario:hover {
+    background-color: var(--color-secundario);
+    color: #ffffff;
+}

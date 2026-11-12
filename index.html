@@ -1,73 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Catálogo de Helados</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería 3381732</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="menu-lateral">
+            <ul class="menu-lateral__list">
+                <li class="menu-lateral__item"><a href="#" class="menu-lateral__link">Inicio</a></li>
+                <li class="menu-lateral__item"><a href="#" class="menu-lateral__link">Productos</a></li>
+                <li class="menu-lateral__item"><a href="#" class="menu-lateral__link">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <h2>Nuestros Productos</h2>
+    <main class="main-container">
+        <section class="catalogo">
+            <h2 class="catalogo__title">Nuestros Productos</h2>
+            
+            <div class="catalogo__grid">
+                <!-- Tarjeta 1 -->
+                <article class="card">
+                    <span class="card__badge">¡Nuevo!</span>
+                    <img src="helado1.jpg" alt="Producto 1" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Producto 1</h3>
+                        <p class="card__description">Descripción del producto uno.</p>
+                        <span class="card__price">$50.000</span>
+                        <button class="btn btn--primario">Comprar</button>
+                    </div>
+                </article>
 
-    <main class="contenedor-cajas">
-      <!-- Producto 1 -->
-      <article class="producto">
-        <img src="helado1.jpg" alt="Helado 1" class="img-producto" />
-        <h3>Producto 1</h3>
-        <p>Descripción del producto uno.</p>
-        <p><strong>$50.000</strong></p>
-        <button class="btn-comprar">Comprar</button>
-      </article>
-
-      <!-- Producto 2 -->
-      <article class="producto">
-        <img src="helado2.jpg" alt="Helado 2" class="img-producto" />
-        <h3>Producto 2</h3>
-        <p>Descripción del producto dos.</p>
-        <p><strong>$75.000</strong></p>
-        <button class="btn-comprar">Comprar</button>
-      </article>
-
-      <!-- Producto 3 -->
-      <article class="producto">
-        <img src="helado3.jpg" alt="Helado 3" class="img-producto" />
-        <h3>Producto 3</h3>
-        <p>Descripción del producto tres.</p>
-        <p><strong>$100.000</strong></p>
-        <button class="btn-comprar">Comprar</button>
-      </article>
-
-      <!-- Producto 4 -->
-      <article class="producto">
-        <img src="helado4.jpg" alt="Helado 4" class="img-producto" />
-        <h3>Producto 4</h3>
-        <p>Descripción del producto cuatro.</p>
-        <p><strong>$120.000</strong></p>
-        <button class="btn-comprar">Comprar</button>
-      </article>
+                <!-- Tarjeta 2 -->
+                <article class="card">
+                    <span class="card__badge">¡Nuevo!</span>
+                    <img src="helado2.jpg" alt="Producto 2" class="card__image">
+                    <div class="card__content">
+                        <h3 class="card__title">Producto 2</h3>
+                        <p class="card__description">Descripción del producto dos.</p>
+                        <span class="card__price">$75.000</span>
+                        <button class="btn btn--primario">Comprar</button>
+                    </div>
+                </article>
+            </div>
+        </section>
     </main>
-
-    <aside class="filtros">
-      <h3>Filtros</h3>
-      <ul>
-        <li><a href="#">Filtro 1</a></li>
-        <li><a href="#">Filtro 2</a></li>
-      </ul>
-    </aside>
-
-    <footer>
-      <p>&copy; 2026 - Todos los derechos reservados</p>
-      <p><a href="#" style="color: #93c5fd">Redes Sociales</a></p>
-    </footer>
-  </body>
-</html>
+</body>
+</html> 
