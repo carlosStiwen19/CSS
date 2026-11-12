@@ -1,41 +1,42 @@
-/* Reseteo general y obligatoriedad del modelo de caja */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* --- Importación de módulos CSS --- */
+@import "botones.css";
+@import "tarjeta.css";
+@import "menu-lateral.css";
+
+/* --- Macro-Arquitectura Global (Layout Flexbox) --- */
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Controla la altura total y empuja el footer al fondo */
 }
 
-/* Colores de fondo para identificar las "supercajas" principales */
+.main-wrapper {
+    display: flex;
+    flex: 1; /* Absorbe todo el espacio central disponible */
+}
+
+/* Estilos base de contenedores principales */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #e3f2fd;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    background-color: #f5f5f5;
     padding: 20px;
 }
 
 aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-grande, 20px);
     background-color: #fff3e0;
     padding: 15px;
 }
 
 footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: #212121;
     color: #ffffff;
     padding: 20px;
-    text-align: center;
-}
-
-/* Estilos de las tarjetas de productos con Padding y Margin obligatorios */
-article {
-    display: inline-block;
-    width: 30%;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    padding: 20px; /* Aire interno para que el texto no toque los bordes */
-    margin: 15px 1.5%; /* Espacio exterior para evitar colisiones */
-    vertical-align: top;
 }

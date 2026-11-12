@@ -1,0 +1,15 @@
+.menu-lateral {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_list, .menu-lateral__lista {
+    display: flex;
+    gap: var(--espaciado-medio, 15px); /* Espaciado automático y simétrico */
+    list-style: none;
+}
+
+.menu-lateral__enlace {
+    text-decoration: none;
+    color: #333333;
+}

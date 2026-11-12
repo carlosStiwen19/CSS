@@ -1,0 +1,19 @@
+.card, .tarjeta {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garantiza altura uniforme en todas las tarjetas */
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 15px 1.5px;
+}
+
+.card__description {
+    flex-grow: 1; /* Actúa como resorte flexible empujando el botón abajo */
+}
+
+.card__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; /* Alinea precio de oferta y tachado en la misma línea base */
+}
