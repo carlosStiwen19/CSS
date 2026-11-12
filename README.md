@@ -20,3 +20,9 @@ Este repositorio contiene el desarrollo del **Momento 2: Misión de Apropiación
 
 3. **Cómo se ven afectados los elementos hermanos cuando le aplicas un margen grande a uno de ellos:**
    - Al aplicarle un margen exterior muy grande a un elemento en particular, este empuja de forma evidente a los elementos hermanos adyacentes o inferiores, alterando el flujo tradicional de la interfaz y pudiendo provocar saltos de línea no deseados en diseños basados en bloques o `inline-block`.
+ 
+ Qué significa BEM (Block, Element, Modifier) y cómo se escribe visualmente.
+
+Por qué dividir el CSS en varios archivos facilita el trabajo en equipo.
+
+Cómo esta metodología evita la guerra de especificidad manteniendo un peso plano (valor 10).
