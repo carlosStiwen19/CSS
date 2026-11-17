@@ -25,4 +25,15 @@ Este repositorio contiene el desarrollo del **Momento 2: Misión de Apropiación
 
 Por qué dividir el CSS en varios archivos facilita el trabajo en equipo.
 
-Cómo esta metodología evita la guerra de especificidad manteniendo un peso plano (valor 10).
+Cómo esta metodología evita la guerra de especificidad manteniendo un peso plano (valor 10). 
+
+## Hallazgos: Arquitectura Total con Flexbox
+
+1. **Control del pie de página con `min-height: 100vh` y `flex-direction: column`:** 
+   Al convertir el contenedor global en una columna flexible con altura mínima del 100% del viewport y asignar `flex: 1` al contenedor central, se garantiza que el contenido principal ocupe todo el espacio vertical disponible, fijando el pie de página al fondo de la pantalla.
+
+2. **Reemplazo de márgenes laterales mediante `gap`:** 
+   La propiedad `gap` en contenedores flexibles como listas de navegación y paneles laterales permite definir un espaciado uniforme y predecible únicamente entre elementos hermanos, eliminando márgenes manuales.
+
+3. **Tarjetas resistentes a distintas longitudes de texto:** 
+   La combinación de un eje vertical (`flex-direction: column`) en la tarjeta y `flex-grow: 1` en la descripción permite que las tarjetas absorban textos largos manteniendo los botones y precios alineados de forma idéntica en la base.
