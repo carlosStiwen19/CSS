@@ -1,18 +1,40 @@
-.catalogo {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Contenedor de la cuadrícula de tarjetas */
+.cards-container, .main, .catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
 }
 
-.catalogo__title {
-    font-family: var(--fuente-principal);
-    color: var(--color-primario);
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+/* Tarjeta individual con tamaño controlado */
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 280px; /* Ancho fijo para que no se expandan toda la pantalla */
+    max-width: 100%;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: auto; /* Permite que crezca según el contenido pero controlada */
 }
 
-.catalogo__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+/* Imagen de la tarjeta adaptada */
+.card img, .card__img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card__description, .card__body {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.card__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem;
 }
