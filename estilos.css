@@ -1,54 +1,43 @@
-/* Layout Global Flexbox */
-.app-layout {
+/* Contenedor principal que arma las hileras */
+.main, .catalog, .productos-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.main-wrapper {
-    display: flex;
-    flex: 1;
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__list {
-    display: flex;
-    gap: 1.5rem;
-}
-
-/* Aside */
-.aside {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/* Tarjetas */
+/* Cada tarjeta ocupa exactamente el 33% para forzar 3 columnas por hilera */
 .card {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    flex: 0 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+/* Imagen de la tarjeta fija y ordenada */
+.card img, .card__img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Cuerpo flexible para empujar el precio al fondo */
 .card__description, .card__body {
     flex-grow: 1;
+    padding: 1rem;
 }
 
 .card__price-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding: 1rem;
+    border-top: 1px solid #eee;
 }
