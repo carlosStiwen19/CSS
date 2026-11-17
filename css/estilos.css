@@ -1,0 +1,4 @@
+
+/* === GRILLA CENTRADA FLEXBOX === */
+.catalog, .main__productos, .productos-grid, .productos, section { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 15px; width: 100%; margin: 0 auto; }
+.card, .producto, article { display: flex; flex-direction: column; flex: 0 1 260px; width: 260px; box-sizing: border-box; }
