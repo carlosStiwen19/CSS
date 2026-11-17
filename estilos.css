@@ -40,4 +40,49 @@
     align-items: baseline;
     padding: 1rem;
     border-top: 1px solid #eee;
+} 
+
+/* 1. Forzar que el contenedor de los productos sea un Flexbox con envoltura */
+.main, .catalog, .productos-container, section {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: center !important;
+    padding: 20px !important;
+}
+
+/* 2. Forzar que cada tarjeta sea una cajita independiente de 3 columnas (aprox 300px) */
+.card, article {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 1 300px !important;
+    width: 300px !important;
+    background: #ffffff !important;
+    border: 1px solid #ddd !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    box-sizing: border-box !important;
+}
+
+/* 3. Controlar la imagen para que NO se expanda y quede coqueta en la cajita */
+.card img, article img, .card__img {
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+/* 4. Cuerpo y pie de la tarjeta */
+.card__description, .card__body, article > div {
+    padding: 15px !important;
+    flex-grow: 1 !important;
+}
+
+.card__price-wrapper {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 15px !important;
+    border-top: 1px solid #eee !important;
 }
